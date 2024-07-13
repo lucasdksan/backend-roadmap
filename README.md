@@ -5,7 +5,7 @@ RoadMap Back-End Developer
 ## Sumário
 
 * [Internet](#Internet)
-* [O que é HTTP?](#O-que-é-HTTP?)
+* [HTTP](#HTTP)
 * [Referências](#Referências)
 
 ## Internet
@@ -122,7 +122,7 @@ A confiabilidade na comunicação de dados é garantida por vários mecanismos, 
 
 * Algoritmos de Controle de Congestionamento: TCP inclui mecanismos para detectar e reagir à congestão na rede, como o Slow Start e o Congestion Avoidance, que ajustam a taxa de envio de pacotes para evitar a saturação da rede.
 
-## O que é HTTP?
+## HTTP
 
 
 
