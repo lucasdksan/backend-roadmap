@@ -349,4 +349,90 @@ Exemplo:
 
 Isso evitará que a tabela customers seja removida se houver tabelas com chaves estrangeiras que dependam dela.
 
-### 
+### Triggers
+
+Triggers (ou gatilhos) são procedimentos que são automaticamente executados em resposta a certos eventos em uma tabela, como inserções, atualizações ou exclusões.
+
+Exemplo de criação de um trigger:
+
+```sql
+    CREATE TRIGGER update_customer_timestamp
+    AFTER UPDATE ON customers
+    FOR EACH ROW
+    EXECUTE PROCEDURE update_timestamp();
+```
+
+### Views
+
+Além de mencionar as views, é útil explicar suas vantagens e desvantagens. As views são tabelas virtuais baseadas em consultas SQL. Elas podem ser usadas para simplificar consultas complexas, mas não podem sempre ser atualizadas.
+
+Exemplo de criação de uma view:
+
+```sql
+    CREATE VIEW active_customers AS
+    SELECT * FROM customers WHERE is_active = TRUE;
+```
+
+### Stored Procedures e Functions
+
+Stored procedures e functions são blocos de código SQL que podem ser armazenados no banco de dados e executados quando necessário, permitindo encapsular lógica complexa e reutilizar código.
+
+Exemplo de criação de uma função:
+
+```sql
+    CREATE FUNCTION get_customer_count() RETURNS INTEGER AS $$
+    BEGIN
+        RETURN (SELECT COUNT(*) FROM customers);
+    END;
+    $$ LANGUAGE plpgsql;
+```
+
+### Otimização e Performance
+
+Pode ser interessante incluir algumas dicas sobre otimização e como usar EXPLAIN para analisar consultas e entender o desempenho:
+
+```sql
+    EXPLAIN SELECT * FROM customers WHERE name = 'John Doe';
+```
+
+### Backup e Restore
+
+Incluir comandos e estratégias para fazer backup e restaurar um banco de dados, como pg_dump e pg_restore, é crucial para a administração de bancos de dados.
+
+Exemplo de backup:
+
+```sql
+    pg_dump nome_do_banco_de_dados > backup.sql
+```
+
+Exemplo de restauração:
+
+```sql
+    psql nome_do_banco_de_dados < backup.sql
+```
+
+### Segurança e Permissões
+
+Explicar como gerenciar usuários e permissões no banco de dados é vital. Isso inclui comandos como GRANT e REVOKE:
+
+Exemplo de concessão de permissão:
+
+```sql
+    GRANT SELECT ON customers TO user_name;
+```
+
+### Particionamento de Tabelas
+
+Discutir o particionamento de tabelas pode ser útil em cenários onde as tabelas são muito grandes, permitindo dividir dados em partes menores para melhorar o desempenho.
+
+### Documentação e Comentários
+Incluir a importância de documentar o esquema do banco de dados e o uso de comentários em SQL para ajudar na manutenção.
+
+Exemplo de comentário:
+
+```sql
+    -- Esta tabela armazena informações sobre os clientes
+    CREATE TABLE customers (
+        ...
+    );
+```
