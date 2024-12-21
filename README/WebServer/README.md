@@ -1,0 +1,6 @@
+## Servidores Web
+
+No lado do hardware, um servidor web é um computador que armazena software de servidor web e arquivos de componentes de um site (por exemplo, documentos HTML, imagens, folhas de estilo CSS e arquivos JavaScript). Um servidor web se conecta à Internet e suporta troca física de dados com outros dispositivos conectados à web.
+No lado do software, um servidor web inclui várias partes que controlam como os usuários da web acessam arquivos hospedados. No mínimo, este é um servidor HTTP . Um servidor HTTP é um software que entende URLs (endereços da web) e HTTP (o protocolo que seu navegador usa para visualizar páginas da web). Um servidor HTTP pode ser acessado por meio dos nomes de domínio dos sites que ele armazena e entrega o conteúdo desses sites hospedados ao dispositivo do usuário final.
+
+Um servidor web estático , ou pilha, consiste em um computador (hardware) com um servidor HTTP (software). Nós o chamamos de "estático" porque o servidor envia seus arquivos hospedados como estão para seu navegador. Um servidor web dinâmico consiste em um servidor web estático mais software extra, mais comumente um servidor de aplicação e um banco de dados . Nós o chamamos de "dinâmico" porque o servidor de aplicação atualiza os arquivos hospedados antes de enviar conteúdo para seu navegador via servidor HTTP.
